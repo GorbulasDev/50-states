@@ -25,7 +25,7 @@ export default {
     StateList
   },
 
-  // When the component loads, make this call.
+  // When the component loads, fetch all states from the Database.
   mounted() {
     this.$stateService.getAllStates().then(states => console.log(states))
   }

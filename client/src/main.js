@@ -1,4 +1,4 @@
-// Application hooks.
+// Application hooks, called before the lifecycle begins.
 import { createApp } from 'vue'
 import App from './App.vue'
 

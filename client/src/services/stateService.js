@@ -17,7 +17,7 @@ export default {
             })
     },
 
-    // Returns one state from a client call.
+    // Returns one state.
     getOneState(stateName) {
         return axios.get('/api/state/' + stateName)
             .then(response => {

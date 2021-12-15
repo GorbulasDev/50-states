@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import StateList from '@/components/StateList'
 import AboutSite from '@/components/AboutSite'
 import StateMap from '@/components/StateMap'
+import NotFound from '@/components/NotFound'
 
 export default createRouter({
     history: createWebHistory(),
@@ -22,6 +23,11 @@ export default createRouter({
             path: '/map/:state',
             name: 'StateMap',
             component: StateMap
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'NotFound',
+            component: NotFound
         }
     ]
 })

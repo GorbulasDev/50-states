@@ -31,7 +31,7 @@ export default {
         }
     },
     mounted() {
-        // Global property ($route).
+        // Global property ($router).
         // Read the param of the state inside index.js (/map/:state) inside our router.
         this.state.name = this.$route.params.state
         this.fetchStateData()
@@ -45,7 +45,7 @@ export default {
                 }).catch(err => {
                     // Handle 404 and 500 (not found and server errors).
                     if (err.response && err.response.status == 404) {
-                        this.state.name = '?' // think of a better way to do this...
+                        this.$router.push({ name: 'NotFound' })
                     } else {
                         // 500 server error.
                         alert('Sorry, error fetching data about this State.') // for the user.

@@ -27,7 +27,6 @@ export default {
         }
     },
     // This attempts to fetch a list of states upon loading the component.
-    // See lifecycle hooks.
     mounted() {
         this.fetchAllStates()
     },
@@ -37,16 +36,17 @@ export default {
             this.$stateService.getAllStates().then(states => {
                 this.states = states
             }).catch(err => {
-                alert('Sorry, cannot fetch state list.') // for the user.
+                alert('Sorry, an error occured while attempting to fetch the list of states.')
                 console.error(err) // for the developer.
             })
         },
+        // Updates the application state after clicking on the checkbox.
         updateVisited(stateName, visitedState) {
             this.$stateService.setVisited(stateName, visitedState)
                 .then( () => {
                     this.fetchAllStates()
                 }).catch(err => {
-                    alert('Sorry, cannot update state.') // for the user.
+                    alert('Sorry, an error occured while attempting to update the state.')
                     console.error(err) // for the developer.
                 })
         }
