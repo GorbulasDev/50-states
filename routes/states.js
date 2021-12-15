@@ -5,10 +5,22 @@ const States = require('../models').States
 // Instantiate a router.
 const router = express.Router()
 
+// Retrieve a list of states which have been visited.
+// We are using the visitedState property.
+router.get('/statesvisited', function(req, res, next) {
+    // Get all the States that are visited.
+    // Good idea to order results from a Database.
+    States.findAll({ order: ['name'], where: { visitedState: true }})
+        .then(statesVisited => {
+            return res.json(statesVisited)
+        })
+        .catch(err => next(err))
+})
+
 // Retrieve all states.
 router.get('/states', function(req, res, next) {
     // Find all states and order them by name.
-    States.findAll({ order: ['name']}).then(states => {
+    States.findAll({ order: ['name'] }).then(states => {
         return res.json(states)
     })
     .catch(err => next(err))

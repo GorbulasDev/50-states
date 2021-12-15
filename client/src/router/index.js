@@ -5,6 +5,7 @@ import StateList from '@/components/StateList'
 import AboutSite from '@/components/AboutSite'
 import StateMap from '@/components/StateMap'
 import NotFound from '@/components/NotFound'
+import StatesVisited from '@/components/StatesVisited'
 
 export default createRouter({
     history: createWebHistory(),
@@ -25,6 +26,13 @@ export default createRouter({
             component: StateMap
         },
         {
+            path: '/visitedstates',
+            name: 'StatesVisited',
+            component: StatesVisited
+        },
+        {
+            // Any other route, not defined.
+            // This has to be last.
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
             component: NotFound

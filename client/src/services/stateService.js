@@ -23,5 +23,13 @@ export default {
             .then(response => {
                 return response.data
             })
+    },
+    
+    // Returns a list of visited states.
+    getStatesVisited() {
+        return axios.get('/api/statesvisited')
+            .then(response => {
+                return response.data
+            })
     }
 }

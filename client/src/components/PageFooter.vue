@@ -8,6 +8,10 @@
         <span class="p-3">
             <router-link to="/about">About this site</router-link>
         </span>
+
+        <span class="p-3">
+            <router-link to="/visitedstates">States visited</router-link>
+        </span>
     </div>
 
     <p>Header image and map photo by
