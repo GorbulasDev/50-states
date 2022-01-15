@@ -11,7 +11,3 @@ export default {
     name: 'AboutSite',
 }
 </script>
-
-<style scoped>
-
-</style>

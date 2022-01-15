@@ -23,11 +23,6 @@ export default {
     AboutSite,
     StateDetail,
     StateList
-  },
-
-  // When the component loads, fetch all states from the Database.
-  mounted() {
-    this.$stateService.getAllStates().then(states => console.log(states))
   }
 }
 </script>

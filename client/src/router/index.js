@@ -1,3 +1,7 @@
+//
+// File: index.js
+// Purpose: Acts as the "router" as the client navigates through Webpages.
+//
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Add components to be used by the router.

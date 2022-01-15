@@ -1,3 +1,7 @@
+//
+// File: stateService.js
+// Purpose: Makes client-side API calls to the server.
+//
 import axios from 'axios'
 
 export default {

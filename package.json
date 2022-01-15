@@ -9,10 +9,10 @@
   "author": "Mathieu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "pg": "^8.7.1",
-    "sequelize": "^6.12.0-alpha.1",
-    "sequelize-cli": "^6.3.0"
+    "sequelize": "^6.13.0",
+    "sequelize-cli": "^6.4.0"
   },
   "devDependencies": {
     "sqlite3": "^5.0.2"

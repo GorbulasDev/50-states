@@ -1,7 +1,9 @@
 <template>
     <div>
         <h2>States You Have Visited</h2>
+
         <p v-for="state in statesVisited" :key="state.id">{{ state.name }}</p>
+        <p v-if="statesVisited < 1">You have not visited any States!</p>
     </div>
 </template>
 
